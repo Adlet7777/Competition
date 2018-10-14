@@ -15,11 +15,6 @@ public class Name {
 		firstName = fName;
 		lastName = lName;
 	}
-	
-	
-	
-	
-
 	public String getFirstName() {
 		return firstName;
 	}
