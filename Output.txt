@@ -1,0 +1,5 @@
+The report contains full details of all competitors
+
+Com. Number   Name               Country     Level     Age     Scores              Total
+
+There are divers to dive from platform
