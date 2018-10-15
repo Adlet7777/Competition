@@ -1,4 +1,4 @@
-import java.io.File;
+/*import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class competitorsList{
 	public void add(ATMcompetitors ATMcomp) {
 		competitorsList.add(ATMcomp);
 	}
-	
+	/*
 	public String getAllcomp() {
 		String report = "";
 		for (ATMcompetitors ATMcomp : competitorsList) {
@@ -54,7 +54,7 @@ public class competitorsList{
 				compIDexists=true;
 			}
 		}
-		/*if (compIDexists)
+		if (compIDexists)
 		{
 			report+="The details of CHOSEN competitor:\n"+getFullDetailsofExactComp(compID);
 			}
@@ -63,15 +63,9 @@ public class competitorsList{
 			JOptionPane.showMessageDialog(null, "The number you entered does not match to competitors' numbers.");
 		}
 		report += "\n\n\n\n\nSTATISTICAL REPORT\n\n";
-		//report+=getStatisticalReport();*/
+		report+=getStatisticalReport();
 		return report;
   }
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -136,21 +130,11 @@ public class competitorsList{
 	}
 	
 	
-	
-	
-	
 	 public String getFullDetailsfromCompetitorsList() {
 		 String report = "";
 		 report+="\n";
 		 report+="\n";
 		 report+="Com. Number   Name               Country     Level     Age     Scores              Total";
-		 
-		 
-		 
-		 
-		 
-		 
-		 
 		 
 		 
 		 report+="\n";
@@ -165,18 +149,4 @@ public class competitorsList{
 		return report;
 	 }
 	 
-	 
-	 
-	 
-	 
-	 
-
-
-	
-
-
-
-
-
-	
-}
+}*/

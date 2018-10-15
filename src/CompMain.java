@@ -1,12 +1,14 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
-import java.awt.List;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 
 
@@ -14,24 +16,54 @@ public class CompMain {
 
 	public static void main(String[] args) throws IOException {
 		
-		File f = new  File("InputCompetitors.csv");
-		Scanner s = new Scanner(f);
-		String nexLine = s.nextLine();
+		ArrayList<ATMcompetitors> complist = new ArrayList<>();
+		
+		BufferedReader reader = new BufferedReader(new FileReader("InputCompetitors.csv"));
+		String line = null;
+		Scanner scanner = null;
+		while ((line = reader.readLine()) != null) {			
+			ATMcompetitors competitorAll = new ATMcompetitors();
+			scanner = new Scanner(line);
+			scanner.useDelimiter(",");
+			int index = 0;
+			while (scanner.hasNext()) {
+				String data = scanner.next();
+				if(index == 0)
+					competitorAll.setComNum(data);
+				else if (index == 1)
+					competitorAll.setName(data);
+				else if (index == 2)
+					competitorAll.setCountry(data);
+				else if (index == 3)
+					competitorAll.setLevel(data);
+				else if (index == 4)
+					competitorAll.setAge(Integer.parseInt(data));
+				else if (index == 5)
+					competitorAll.setCompType(data);				
+				else if (index == 6) 
+					competitorAll.setScore(data, 0);
+				else if (index == 7)
+					competitorAll.setScore(data, 1);
+				else if (index == 8)
+					competitorAll.setScore(data, 2);
+				else if (index == 9)
+					competitorAll.setScore(data, 3);
+				else if (index == 10)
+					competitorAll.setScore(data, 4);				
+	            index++;
+			}
+			complist.add(competitorAll);
+		}
+		reader.close();	
+		System.out.println("1st com " + complist.get(1).getName());
+		System.out.println("1st com " + complist.get(1).getName());
 		
 		
-
-			FileWriter fileWriter = new FileWriter("Output.txt", true);
-			PrintWriter printWriter = new PrintWriter(fileWriter);
-		
-			
-			printWriter.close();
-		
-		
-		
-	}
-	
-	
+	}	
 }
+	
+	
+
 	
 	
 	
